@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i;
+    double numeroRealComDesconto;
+    double* numerosReais;
+
+    numerosReais = malloc(5 * sizeof (double));
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("\nDigite o %d numero:", i + 1);
+        scanf("%lf", &numerosReais[i]);
+    }
+
+    for(i = 0; i < 5; i++)
+    {
+        numeroRealComDesconto = numerosReais[i] - (numerosReais[i] * 0.1);
+
+        printf("\nNumero original: %.2lf --- Numero com desconto: %.2lf", numerosReais[i], numeroRealComDesconto);
+    }
+
+    return 0;
+}
